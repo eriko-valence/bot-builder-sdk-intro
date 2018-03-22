@@ -1,0 +1,22 @@
+{
+  "name": "bot-builder-sdk-intro",
+  "version": "1.0.0",
+  "description": "getting started with bot builder sdk for nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eriko-valence/bot-builder-sdk-intro.git"
+  },
+  "author": "Erik Olsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eriko-valence/bot-builder-sdk-intro/issues"
+  },
+  "homepage": "https://github.com/eriko-valence/bot-builder-sdk-intro#readme",
+  "dependencies": {
+    "botbuilder": "^3.14.1"
+  }
+}
