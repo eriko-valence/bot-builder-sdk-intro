@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/eriko-valence/bot-builder-sdk-intro#readme",
   "dependencies": {
-    "botbuilder": "^3.14.1"
+    "botbuilder": "^3.14.1",
+    "restify": "^7.0.0"
   }
 }
