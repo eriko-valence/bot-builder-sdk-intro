@@ -1,5 +1,14 @@
 var restify = require('restify');
 var builder = require('botbuilder');
+var azure = require('botbuilder-azure'); 
+
+// Table storage
+var tableName = "BotState"; // You define
+var storageName = "erikobotbuildersdk"; // Obtain from Azure Portal
+var storageKey = "Jn/4tqAaQLKTywbDhKKMNtC6CKdTYsQ6wVP8QrRVZF5uoinD+GV6oLavCYGWVQgkigsrrkPSBgY0Qa0sBieMOQ=="; // Obtain from Azure Portal
+
+var azureTableClient = new azure.AzureTableClient(tableName, storageName, storageKey);
+var tableStorage = new azure.AzureBotStorage({gzipData: false}, azureTableClient);
 
 // Setup Restify Server
 var server = restify.createServer();
@@ -21,4 +30,4 @@ var bot = new builder.UniversalBot(connector, function (session) {
     console.log(session.message.text);
     session.send("You said: %s", session.message.text);
     session.send
-});
+}).set('storage', tableStorage);
